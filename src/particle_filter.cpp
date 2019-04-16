@@ -150,7 +150,7 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
   {
     std::cout<<"particle id="<<particles[i].id<<", particle x="<<particles[i].x<<", particle y="<<particles[i].y<<std::endl;
     //vector<LandmarkObs> transformed_observations;
-    Particle particle = particles[i];
+    Particle &particle = particles[i];
     double new_weight = 1.0;
     for(int j=0; j<observations.size(); ++j)
     {
